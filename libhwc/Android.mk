@@ -21,7 +21,7 @@ LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SHARED_LIBRARIES := liblog libcutils libEGL libGLESv1_CM libhardware \
 	libhardware_legacy libion_exynos libutils libsync \
 	libexynosv4l2 libMcClient libexynosutils libhwcutils libexynosdisplay libhdmi \
-	libdisplaymodule libhdmimodule libmpp
+	libexynosdisplaymodule libhdmimodule libmpp
 
 ifeq ($(BOARD_DYNAMIC_RECOMPOSITION_DISABLED), true)
 	LOCAL_CFLAGS += -DDYNAMIC_RECOMPOSITION_DISABLED
@@ -103,7 +103,7 @@ LOCAL_C_INCLUDES += \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/libcec \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/include \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/libhwcmodule \
-	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/libdisplaymodule \
+	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/libexynosdisplaymodule \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/libhdmimodule \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/libhwcutilsmodule \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/libmpp \
