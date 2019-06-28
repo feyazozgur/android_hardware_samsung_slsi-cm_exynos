@@ -30,8 +30,8 @@ LOCAL_C_INCLUDES += \
 	hardware/samsung_slsi-cm/$(TARGET_SOC)/include \
 	hardware/samsung_slsi-cm/$(TARGET_BOARD_PLATFORM)/include
 
-LOCAL_ADDITIONAL_DEPENDENCIES := \
-	INSTALLED_KERNEL_HEADERS
+LOCAL_CFLAGS += -Wno-unused-variable
+LOCAL_CFLAGS += -Wno-mismatched-tags
 
 LOCAL_SHARED_LIBRARIES:= liblog libutils libbinder
 

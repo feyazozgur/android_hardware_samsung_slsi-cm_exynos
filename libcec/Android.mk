@@ -20,5 +20,7 @@ LOCAL_MODULE_TAGS := eng
 LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_SRC_FILES := libcec.c
 
+LOCAL_CFLAGS += -Wno-unused-function
+
 LOCAL_MODULE := libcec-exynos
 include $(BUILD_SHARED_LIBRARY)

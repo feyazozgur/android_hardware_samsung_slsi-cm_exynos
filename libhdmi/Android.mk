@@ -41,11 +41,13 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/libmpp \
 	$(TOP)/system/core/libsync/include
 
-LOCAL_ADDITIONAL_DEPENDENCIES := \
-	INSTALLED_KERNEL_HEADERS
-
 LOCAL_SRC_FILES := \
 	ExynosExternalDisplay.cpp dv_timings.c
+
+LOCAL_CFLAGS += -Wno-header-guard
+LOCAL_CFLAGS += -Wno-missing-field-initializers
+LOCAL_CFLAGS += -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-unused-variable
 
 LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libhdmi

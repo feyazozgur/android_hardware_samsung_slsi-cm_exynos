@@ -17,9 +17,6 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/include \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_BOARD_PLATFORM)/include
 
-LOCAL_ADDITIONAL_DEPENDENCIES += \
-	INSTALLED_KERNEL_HEADERS
-
 ifeq ($(BOARD_USE_KHRONOS_OMX_HEADER), true)
 LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/openmax/include/khronos
 else
@@ -37,6 +34,12 @@ endif
 ifneq ($(filter exynos5422 exynos5430 exynos5433 exynos7420 exynos7580 exynos7870 exynos7880 exynos8890 exynos8895, $(TARGET_SOC)),)
 LOCAL_CFLAGS += -DNEW_API
 endif
+
+LOCAL_CFLAGS += -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-unused-variable
+LOCAL_CFLAGS += -Wno-unused-function
+LOCAL_CFLAGS += -Wno-unused-label
+LOCAL_CFLAGS += -Wno-format
 
 LOCAL_MODULE := libExynosVideoApi
 LOCAL_MODULE_TAGS := optional

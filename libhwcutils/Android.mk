@@ -64,9 +64,6 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/libhwcutilsmodule \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/libmpp
 
-LOCAL_ADDITIONAL_DEPENDENCIES := \
-	INSTALLED_KERNEL_HEADERS
-
 ifeq ($(BOARD_HDMI_INCAPABLE), true)
 LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/exynos/libhdmi_dummy
 else
@@ -77,6 +74,11 @@ else
 LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/exynos/libhdmi_legacy
 endif
 endif
+
+LOCAL_CFLAGS += -Wno-format
+LOCAL_CFLAGS += -Wno-mismatched-tags
+LOCAL_CFLAGS += -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-unused-variable
 
 LOCAL_SRC_FILES += \
 	ExynosHWCUtils.cpp \
