@@ -6,6 +6,9 @@ include $(CLEAR_VARS)
 ifeq ($(BOARD_USE_SEIREN_AUDIO), true)
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS += -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-unused-variable
+
 LOCAL_SRC_FILES :=  dec/seiren_hw.c
 
 LOCAL_C_INCLUDES := \
