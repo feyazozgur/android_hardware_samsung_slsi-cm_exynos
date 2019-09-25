@@ -94,7 +94,7 @@ ifeq ($(BOARD_USES_VIRTUAL_DISPLAY), true)
 	LOCAL_SRC_FILES += ExynosG2DWrapper.cpp
 endif
 
-LOCAL_MODULE_TAGS := eng
+LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libhwcutils
 include $(BUILD_SHARED_LIBRARY)
 

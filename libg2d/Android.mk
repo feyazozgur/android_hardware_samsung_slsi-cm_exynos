@@ -28,6 +28,6 @@ LOCAL_ADDITIONAL_DEPENDENCIES := \
 
 LOCAL_SRC_FILES := exynos_blender.cpp exynos_blender_obj.cpp libg2d.cpp
 
-LOCAL_MODULE_TAGS := eng
+LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libexynosg2d
 include $(BUILD_SHARED_LIBRARY)
