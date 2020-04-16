@@ -444,7 +444,7 @@ int ExynosOverlayDisplay::set(hwc_display_contents_1_t* contents)
     for (size_t i = 0; i < contents->numHwLayers; i++) {
         hwc_layer_1_t &layer = contents->hwLayers[i];
         if (layer.handle != NULL)
-            handle = private_handle_t::dynamicCast(layer.handle);
+            private_handle_t *handle = private_handle_t::dynamicCast(layer.handle);
         /* If Fb is not needed and this is a HWC buffer (function reverse engineered from S7 libexynosdisplay.so) */
         if(!mFbNeeded && layer.compositionType == HWC_FRAMEBUFFER_TARGET) {
             /* Close the acquire fence Fd if it is valid */
